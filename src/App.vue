@@ -1,13 +1,17 @@
 <template>
   <div>
-    aberfia
+    <FirstScreen />
   </div>
 </template>
 
 <script>
+import FirstScreen from '@/components/FirstScreen.vue'
 
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    FirstScreen
+  }
 }
 </script>
 
