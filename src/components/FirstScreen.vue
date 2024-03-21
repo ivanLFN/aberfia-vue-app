@@ -75,6 +75,9 @@
         <div class="sub-main-header mt-4">
           Производственные мощности компании позволяют быстро и качественно<br>выполнить большой объём работы
         </div>
+        <div class="form-component">
+          <FirstScreenForm />
+        </div>
       </div>
     </video-background>
   </div>
@@ -82,11 +85,13 @@
 
 <script>
  import VideoBackground from 'vue-responsive-video-background-player'
+ import FirstScreenForm from '@/components/FirstScreenForm.vue'
 
 export default {
   name: 'FirstScreen',
   components: {
-    VideoBackground
+    VideoBackground,
+    FirstScreenForm
   },
   data() {
     return {
@@ -98,16 +103,30 @@ export default {
 
 <style scoped>
 
+.form-component {
+  margin-top: 3rem;
+}
+
 .sub-main-header {
   font-size: 1.6rem;
   color: white;
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
 }
 
 .main-header {
-  margin-top: 7rem;
+  margin-top: 6rem;
   font-size: 4.5rem;
   font-weight: 600;
   color: white;
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
 }
 
 @media only screen and (max-width: 767px) {
@@ -126,7 +145,7 @@ export default {
 }
 
 .get-call {
-  color: #FF8C2F;
+  color: #0d6efd;
   font-size: 1.1rem;
 }
 
