@@ -4,4 +4,9 @@ import App from './App.vue'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
 
-createApp(App).mount('#app')
+const app = createApp(App)
+
+app.config.globalProperties.elasticMailUsername = 'ivan.lozhkin2020@gmail.com'
+app.config.globalProperties.elasticMailKey = 'A5D4AD06D307152DBF54FAEB41E75780B5C9'
+
+app.mount('#app')
