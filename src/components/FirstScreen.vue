@@ -68,6 +68,14 @@
           </div>
         </div>
       </div>
+      <div class="container-lg">
+        <h1 class="main-header">
+          Изготовление металлических конструкций
+        </h1>
+        <div class="sub-main-header mt-4">
+          Производственные мощности компании позволяют быстро и качественно<br>выполнить большой объём работы
+        </div>
+      </div>
     </video-background>
   </div>
 </template>
@@ -89,6 +97,33 @@ export default {
 </script>
 
 <style scoped>
+
+.sub-main-header {
+  font-size: 1.6rem;
+  color: white;
+}
+
+.main-header {
+  margin-top: 7rem;
+  font-size: 4.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+@media only screen and (max-width: 767px) {
+  .sub-main-header {
+    font-size: 1rem;
+  }
+
+  .main-header {
+    margin-top: 3rem;
+    font-size: 2rem;
+  }
+}
+
+.navbar {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
 .get-call {
   color: #FF8C2F;
