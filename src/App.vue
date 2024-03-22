@@ -16,6 +16,13 @@
   >
     <ServicesComponent />
   </div>
+  <div
+    ref="targetAboutUs"
+    :class="{ 'default-animation': true, 'show': AboutUsIsVisible }"
+    class="show-enter"
+  >
+    <AboutUsComponent />
+  </div>
 </template>
 
 <script setup>
@@ -25,6 +32,7 @@ import { useIntersectionObserver } from '@vueuse/core'
 import FirstScreen from '@/components/FirstScreen.vue'
 import WhyUsComponent from '@/components/WhyUsComponent.vue'
 import ServicesComponent from '@/components/ServicesComponent.vue'
+import AboutUsComponent from '@/components/AboutUsComponent.vue'
 
 const targetWhyUs = ref(null)
 const whyUsIsVisible = ref(false)
@@ -32,8 +40,12 @@ const whyUsIsVisible = ref(false)
 const targetServices = ref(null)
 const ServicesIsVisible = ref(null)
 
+const targetAboutUs = ref(null)
+const AboutUsIsVisible = ref(null)
+
 let hasEnteredWhyUs = false
 let hasEnteredServices = false
+let hasEnteredAboutUs = false
 
 // eslint-disable-next-line
 const { stop: stopWhyUs } = useIntersectionObserver(
@@ -53,6 +65,17 @@ const { stop: stopServices } = useIntersectionObserver(
     if (isIntersecting && !hasEnteredServices) {
       ServicesIsVisible.value = true
       hasEnteredServices = true
+    }
+  }
+)
+
+// eslint-disable-next-line
+const { stop: stopAboutUs } = useIntersectionObserver(
+  targetAboutUs,
+  ([{ isIntersecting }]) => {
+    if (isIntersecting && !hasEnteredAboutUs) {
+      AboutUsIsVisible.value = true
+      hasEnteredAboutUs = true
     }
   }
 )
