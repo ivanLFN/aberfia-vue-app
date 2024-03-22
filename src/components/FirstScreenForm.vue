@@ -5,7 +5,7 @@
         Узнайте стоимость изготовления
       </h3>
       <div>
-        <form class="row" @submit.prevent="handleSubmit">
+        <form class="row" @submit.prevent="handleSubmit" style="overflow-x: hidden;">
           <div class="d-flex justify-content-center mt-5">
             <div class="col-md-4">
               <input
@@ -140,10 +140,6 @@ export default {
 
 <style>
 
-/* .form-check-input {
-  background-color: red !important;
-} */
-
 .btn-style {
   background-color: #0d6efd;
   border: none;
@@ -151,6 +147,12 @@ export default {
   font-size: 1.3rem;
   color: white;
   font-weight: 500;
+}
+
+@media only screen and (max-width: 767px) {
+  .btn-style {
+    font-size: 1rem;
+  }
 }
 
 .form-btn {
