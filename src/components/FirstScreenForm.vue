@@ -7,7 +7,7 @@
       <div>
         <form class="row" @submit.prevent="handleSubmit" style="overflow-x: hidden;">
           <div class="d-flex justify-content-center mt-5">
-            <div class="col-md-4">
+            <div class="form-item">
               <input
                 id="name"
                 v-model="name"
@@ -17,7 +17,7 @@
                 required
               >
             </div>
-            <div class="col-md-4">
+            <div class="form-item">
               <input
                 id="phone"
                 v-model="phone"
@@ -27,10 +27,10 @@
                 required
               >
             </div>
-            <div class="col-md-4 form-btn">
+            <div class="form-item-btn">
               <button
                 type="submit"
-                class="h-100 form-btn btn-style"
+                class="h-100 btn-style"
               >
                 Отправить
               </button>
@@ -140,6 +140,14 @@ export default {
 
 <style>
 
+.form-item-btn {
+  width: 35vh !important;
+}
+
+.form-item {
+  margin-right: 40px;
+}
+
 .btn-style {
   background-color: #0d6efd;
   border: none;
@@ -147,22 +155,23 @@ export default {
   font-size: 1.3rem;
   color: white;
   font-weight: 500;
+  width: 100%;
 }
 
 @media only screen and (max-width: 767px) {
   .btn-style {
     font-size: 1rem;
   }
-}
-
-.form-btn {
-  width: 90%;
+  .form-item {
+    margin-right: 5px;
+  }
 }
 
 .form-input {
   padding: 10px;
-  width: 90%;
+  width: 100%;
   background-color: rgb(53, 55, 64, 0.8);
+  margin-right: 30px;
   border: none;
   border-radius: 5px;
   color: white;
@@ -174,14 +183,6 @@ export default {
 
 .input-title {
   color: rgb(131, 131, 131);
-}
-
-.form-group {
-  text-align: left;
-}
-
-.form-check-label {
-  color: rgb(143, 143, 143);
 }
 
 .form-el {
