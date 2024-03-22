@@ -60,7 +60,7 @@
                       <img class="ico-image" src="images/icons8-phone-50.png" alt="locate" />
                     </div>
                     <div>
-                      <div class="phone">+7 (000) 123-45-67</div>
+                      <a href="tel:+70001234567" class="phone">+7 (000) 123-45-67</a>
                       <div class="get-call">Заказать звонок</div>
                     </div>
                   </div>
@@ -73,9 +73,9 @@
           <h1 class="main-header">
             Изготовление металлических конструкций
           </h1>
-          <div class="sub-main-header mt-4">
+          <p class="sub-main-header mt-4">
             Производственные мощности компании позволяют быстро и качественно<br>выполнить большой объём работы
-          </div>
+          </p>
           <div class="form-component">
             <FirstScreenForm />
           </div>
