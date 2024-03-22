@@ -5,7 +5,7 @@
         Узнайте стоимость изготовления
       </h3>
       <div>
-        <form class="row" @submit.prevent="handleSubmit" style="overflow-x: hidden;">
+        <form class="row pb-1" @submit.prevent="handleSubmit" style="overflow-x: hidden;">
           <div class="d-flex justify-content-center mt-5">
             <div class="form-item">
               <input
