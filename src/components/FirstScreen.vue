@@ -159,6 +159,7 @@ export default {
 .phone {
   color: white;
   font-size: 1.2rem;
+  text-decoration: none;
 }
 
 .ico-image {
