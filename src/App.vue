@@ -23,6 +23,13 @@
   >
     <AboutUsComponent />
   </div>
+  <div
+    ref="targetGallery"
+    :class="{ 'default-animation': true, 'show': GalleryIsVisible }"
+    class="show-enter"
+  >
+    <GalleryComponent />
+  </div>
 </template>
 
 <script setup>
@@ -33,6 +40,8 @@ import FirstScreen from '@/components/FirstScreen.vue'
 import WhyUsComponent from '@/components/WhyUsComponent.vue'
 import ServicesComponent from '@/components/ServicesComponent.vue'
 import AboutUsComponent from '@/components/AboutUsComponent.vue'
+import GalleryComponent from '@/components/GalleryComponent.vue'
+
 
 const targetWhyUs = ref(null)
 const whyUsIsVisible = ref(false)
@@ -43,9 +52,13 @@ const ServicesIsVisible = ref(null)
 const targetAboutUs = ref(null)
 const AboutUsIsVisible = ref(null)
 
+const targetGallery = ref(null)
+const GalleryIsVisible = ref(null)
+
 let hasEnteredWhyUs = false
 let hasEnteredServices = false
 let hasEnteredAboutUs = false
+let hasEnteredGallery = false
 
 // eslint-disable-next-line
 const { stop: stopWhyUs } = useIntersectionObserver(
@@ -76,6 +89,17 @@ const { stop: stopAboutUs } = useIntersectionObserver(
     if (isIntersecting && !hasEnteredAboutUs) {
       AboutUsIsVisible.value = true
       hasEnteredAboutUs = true
+    }
+  }
+)
+
+// eslint-disable-next-line
+const { stop: stopGallery } = useIntersectionObserver(
+  targetGallery,
+  ([{ isIntersecting }]) => {
+    if (isIntersecting && !hasEnteredGallery) {
+      GalleryIsVisible.value = true
+      hasEnteredGallery = true
     }
   }
 )
