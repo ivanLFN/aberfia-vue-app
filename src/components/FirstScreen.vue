@@ -5,43 +5,6 @@
         style="max-height: 100vh; height: 100vh;"
     >
       <div class="scrollable-content">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span>
-                <img class="menu-image" src="images/icons8-menu-50.png" alt="menu-icon" />
-              </span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav me-5 mb-2 mb-lg-0 w-100 d-flex justify-content-center">
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Услуги</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Цены</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">О нас</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Примеры работ</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Почему мы</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Область применения</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Этапы</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Контакты, карты</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
         <div class="top-bar">
           <div class="container-lg py-3">
             <div class="row align-items-center">
