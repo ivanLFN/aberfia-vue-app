@@ -1,11 +1,40 @@
 <template>
   <div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light m-0" style="padding: 0 0 !important;">
+        <button class="navbar-toggler custom-navbar" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span>
+            <img class="menu-image" src="images/icons8-menu-50.png" alt="menu-icon" />
+          </span>
+        </button>
+        <div class="collapse navbar-collapse custom-navbar" id="navbarSupportedContent">
+          <ul class="navbar-nav me-5 pb-2 mb-lg-0 w-100 d-flex justify-content-center">
+            <li class="nav-item">
+              <a href="#" @click="scrollToSection('whyUs')" class="nav-link">Причины выбрать нас</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" @click="scrollToSection('services')" class="nav-link">Наши услуги</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" @click="scrollToSection('aboutUs')" class="nav-link">О нас</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" @click="scrollToSection('gallery')" class="nav-link">Примеры работ</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" @click="scrollToSection('contactUs')" class="nav-link">Контакты</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+  </div>
+  <div id="firstScreen">
     <FirstScreen />
   </div>
   <div
     ref="targetWhyUs"
     :class="{ 'default-animation': true, 'show': whyUsIsVisible }"
     class="show-enter"
+    id="whyUs"
   >
     <WhyUsComponent />
   </div>
@@ -13,6 +42,7 @@
     ref="targetServices"
     :class="{ 'default-animation': true, 'show': ServicesIsVisible }"
     class="show-enter"
+    id="services"
   >
     <ServicesComponent />
   </div>
@@ -20,6 +50,7 @@
     ref="targetAboutUs"
     :class="{ 'default-animation': true, 'show': AboutUsIsVisible }"
     class="show-enter"
+    id="aboutUs"
   >
     <AboutUsComponent />
   </div>
@@ -27,6 +58,7 @@
     ref="targetGallery"
     :class="{ 'default-animation': true, 'show': GalleryIsVisible }"
     class="show-enter"
+    id="gallery"
   >
     <GalleryComponent />
   </div>
@@ -34,6 +66,7 @@
     ref="targetContactUs"
     :class="{ 'default-animation': true, 'show': ContactUsIsVisible }"
     class="show-enter"
+    id="contactUs"
   >
     <ContactUsComponent />
   </div>
@@ -71,6 +104,13 @@ let hasEnteredServices = false
 let hasEnteredAboutUs = false
 let hasEnteredGallery = false
 let hasEnteredContactUs = false
+
+const scrollToSection = (sectionId) => {
+  const targetSection = document.getElementById(sectionId)
+  if (targetSection) {
+    targetSection.scrollIntoView({ behavior: 'smooth' })
+  }
+}
 
 // eslint-disable-next-line
 const { stop: stopWhyUs } = useIntersectionObserver(
@@ -130,6 +170,16 @@ const { stop: stopContactUs } = useIntersectionObserver(
 </script>
 
 <style>
+
+.nav-link {
+  color: white !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+}
+
+.custom-navbar {
+  background-color: #1c1f26 !important;
+}
 
 .show-enter-active {
   transition: opacity 1.2s ease, transform 1.2s ease;
