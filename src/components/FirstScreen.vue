@@ -60,7 +60,7 @@
                       <img class="ico-image" src="images/icons8-phone-50.png" alt="locate" />
                     </div>
                     <div>
-                      <a href="tel:+70001234567" class="phone">+7 (000) 123-45-67</a>
+                      <a href="tel:+70001234567" class="phone">+7(950)411-33-66</a>
                       <div class="get-call">Заказать звонок</div>
                     </div>
                   </div>

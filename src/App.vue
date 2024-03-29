@@ -30,6 +30,13 @@
   >
     <GalleryComponent />
   </div>
+  <div
+    ref="targetContactUs"
+    :class="{ 'default-animation': true, 'show': ContactUsIsVisible }"
+    class="show-enter"
+  >
+    <ContactUsComponent />
+  </div>
 </template>
 
 <script setup>
@@ -41,6 +48,7 @@ import WhyUsComponent from '@/components/WhyUsComponent.vue'
 import ServicesComponent from '@/components/ServicesComponent.vue'
 import AboutUsComponent from '@/components/AboutUsComponent.vue'
 import GalleryComponent from '@/components/GalleryComponent.vue'
+import ContactUsComponent from '@/components/ContactUsComponent.vue'
 
 
 const targetWhyUs = ref(null)
@@ -55,10 +63,14 @@ const AboutUsIsVisible = ref(null)
 const targetGallery = ref(null)
 const GalleryIsVisible = ref(null)
 
+const targetContactUs = ref(null)
+const ContactUsIsVisible = ref(null)
+
 let hasEnteredWhyUs = false
 let hasEnteredServices = false
 let hasEnteredAboutUs = false
 let hasEnteredGallery = false
+let hasEnteredContactUs = false
 
 // eslint-disable-next-line
 const { stop: stopWhyUs } = useIntersectionObserver(
@@ -100,6 +112,17 @@ const { stop: stopGallery } = useIntersectionObserver(
     if (isIntersecting && !hasEnteredGallery) {
       GalleryIsVisible.value = true
       hasEnteredGallery = true
+    }
+  }
+)
+
+// eslint-disable-next-line
+const { stop: stopContactUs } = useIntersectionObserver(
+  targetContactUs,
+  ([{ isIntersecting }]) => {
+    if (isIntersecting && !hasEnteredContactUs) {
+      ContactUsIsVisible.value = true
+      hasEnteredContactUs = true
     }
   }
 )
