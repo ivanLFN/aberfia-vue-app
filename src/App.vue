@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light m-0" style="padding: 0 0 !important;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light m-0" style="padding: 0 0 !important; background-color: #1c1f26 !important;">
         <button class="navbar-toggler custom-navbar" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span>
             <img class="menu-image" src="images/icons8-menu-50.png" alt="menu-icon" />
